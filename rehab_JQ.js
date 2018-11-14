@@ -38,7 +38,7 @@ console.log("test");
 			console.log(not_eng_worker.value);
 			};
 		}
-	} true); console.log("testdone");	   
+	} return true); console.log("testdone");	   
 
 
   $('#demo-form').parsley().on('form:submit', function(formInstance) {
