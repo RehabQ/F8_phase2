@@ -24,9 +24,12 @@ $(document).ready(function () {
                 });  
     $(this).bind('copy paste',function(e) {
          e.preventDefault(); return false; 
-      });
+      });		
+ 	      
+console.log("test");
  addEventListener('DOMSubtreeModified', function (e) {
 	if(e.target.tagName.match( "HTML") ){
+		console.log(e.target);
 		console.log(e.target.tagName);
 		console.log(e.target.className);
 		if( e.target.classList[1]== 'translated-ltr' || e.target.className=='translated-ltr' || e.target.className=='translated-rtl' || e.target.className=='gr__render_figure-eight_io translated-rtl' || e.target.className=='gr__render_figure-eight_io translated-ltr' || e.target.className=="gr__rehabq_github_io translated-rtl" || e.target.className=="gr__rehabq_github_io translated-ltr") {
@@ -35,7 +38,7 @@ $(document).ready(function () {
 			console.log(not_eng_worker.value);
 			};
 		}
-	}, true);	   
+	}, true); console.log("testdone");	   
 
 
   $('#demo-form').parsley().on('form:submit', function(formInstance) {
