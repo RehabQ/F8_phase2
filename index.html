@@ -537,12 +537,10 @@ $(document).ready(function () {
 	if(e.target.tagName.match( "HTML") ){
 		console.log(e.target.tagName);
 		console.log(e.target.className);
-		worker = document.getElementById("not_eng_worker");
-		console.log(worker);
-		if(e.target.className=='gr__render_figure-eight_io translated-rtl' || e.target.className=='gr__render_figure-eight_io translated-ltr' || e.target.className=="gr__rehabq_github_io translated-rtl" || e.target.className=="gr__rehabq_github_io translated-ltr") {
-			worker.value = 1;
+		if(e.target.className=='translated-ltr' || e.target.className=='translated-rtl' || e.target.className=='gr__render_figure-eight_io translated-rtl' || e.target.className=='gr__render_figure-eight_io translated-ltr' || e.target.className=="gr__rehabq_github_io translated-rtl" || e.target.className=="gr__rehabq_github_io translated-ltr") {
+			$('#not_eng_worker').val("1");
 			alert("page has been translated and translation was canceled");
-			console.log(worker);
+			console.log(not_eng_worker.value);
 			};
 		}
 	}, true);	
